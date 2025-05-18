@@ -12,12 +12,13 @@ jobs:
       runs-on: ubuntu-latest
       if: github.ref == 'refs/heads/main'
       steps:
+        - uses: actions/checkout@v2
         - name: Install Node.js 22.x
           uses: actions/setup-node@v2
           with:
             node-version: 22.x
         - name: Install Dependencies
-          run: yarn Install
+          run: yarn install
         - name: Build
           run: yarn build
     Deploy:
