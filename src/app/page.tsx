@@ -1,5 +1,4 @@
 import React from 'react'
-import InfoBody from '../components/molecules/BodyInfo/index'
 import Header from '../components/organisms/Header/index'
 import Navbar from '../components/organisms/Navbar/index'
 import Body from '../components/organisms/Body';
