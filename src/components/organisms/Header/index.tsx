@@ -5,7 +5,7 @@ import { Icon } from "@iconify/react";
 export default function Header() {
   return (
     <nav className='flex flex-row items-center justify-between bg-white shadow-md h-35 w-full px-4'>
-      Hola Munda
+      Hola Munda Actions
         <div className='self-start mt-4 hover:text-gray-500 hover:cursor-pointer '>
             <Icon icon='mingcute:menu-fill'></Icon>
         </div>
