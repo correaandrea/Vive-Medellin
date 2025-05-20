@@ -47,3 +47,16 @@ src/
 .github/
 └── workflows/
     └── CI-CD.yaml         # Pipeline de integración y despliegue
+
+## Instalación local
+# Clonar el repositorio
+git clone https://github.com/tu-usuario/ViveMedellin.git
+
+# Entrar al proyecto
+cd ViveMedellin
+
+# Instalar dependencias
+yarn install
+
+# Ejecutar en desarrollo
+yarn dev
