@@ -39,16 +39,10 @@ export default function Login () {
                 style={{ imageRendering: "auto" }}
                 />
                 <div>
-                    <Text
-                    children= "Iniciar sesión"
-                    classes='font-bold'
-                    />
+                    <Text classes='font-bold'>Iniciar sesión</Text>
                 </div>
                 <div className='flex flex-row gap-x-1 justify-start'>
-                    <Text
-                    children= "¿No tienes una cuenta?"
-                    classes='text-gray-500'
-                    />
+                    <Text classes='text-gray-500'>¿No tienes una cuenta?</Text>
                     <NavTitle
                     title='Registrarse'
                     link='/Register'
@@ -74,10 +68,7 @@ export default function Login () {
                     />
                 </form>
                 <div className='flex flex-col items-center gap-2'>
-                    <Text
-                    children="Olvidé mi contraseña"
-                    classes='text-sky-600'
-                    />
+                    <Text classes='text-sky-600'>Olvidé mi contraseña</Text>
                     <Button />
                 </div>
             </div>
