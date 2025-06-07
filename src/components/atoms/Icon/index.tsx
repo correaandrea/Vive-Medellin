@@ -1,13 +1,18 @@
 import { Icon as IconifyIcon } from '@iconify/react';
-import React from 'react'
+import React from 'react';
 
 type IconProps = {
-    icon: string,
-    classes?: string
-}
+  icon: string;
+  classes?: string;
+  onClick?: React.MouseEventHandler<SVGSVGElement>;
+};
 
-export default function Icon(props: IconProps) {
+export default function Icon({ icon, classes = '', onClick }: IconProps) {
   return (
-    <IconifyIcon icon={props.icon} className={props.classes || ''} />
-  )
+    <IconifyIcon
+      icon={icon}
+      className={classes}
+      onClick={onClick}
+    />
+  );
 }
