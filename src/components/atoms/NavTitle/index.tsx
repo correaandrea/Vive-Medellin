@@ -1,16 +1,21 @@
 import React from 'react';
 import Link from 'next/link';
+import Icon from '../Icon/index'
 
 interface IndexProps {
     title: string,
-    link: string
+    titleClasses?: string,
+    classes?: string
+    link: string,
+    iconName?: string
 }
 
-export default function Titles ({ title, link }: IndexProps) {
+export default function Titles ({ title, link, iconName, titleClasses, classes }: IndexProps) {
   return (
     <Link href={link}>
-        <div className='h-11 flex items-center justify-center text-black hover:text-gray-500'>
-            <h1 className='hover:cursor-pointer hover:border-b'>{title}</h1>
+        <div className={classes}>
+            {iconName && <Icon icon={iconName} />}
+            <h1 className={titleClasses}>{title}</h1>
         </div>
     </Link>
   );
