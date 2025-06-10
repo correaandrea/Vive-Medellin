@@ -17,7 +17,7 @@ export default function Login () {
   };
 
   return (
-    <div className='flex flex-col min-h-screen bg-background'>
+    <div className='flex flex-col min-h-screen justify-between bg-background'>
         <div className='px-10 lg:px-55 pt-10 bg-background'>
             <div className="flex flex-row items-center justify-between bg-background">
                 <Icon icon='mingcute:menu-fill' classes='self-start mt-4 hover:text-gray-500 hover:cursor-pointer'></Icon>
@@ -30,8 +30,8 @@ export default function Login () {
                 />
             </div>
         </div>
-        <div className="flex flex-grow items-center justify-center bg-background px-10 lg:px-100 2xl:px-230">
-            <div className="flex flex-col items-center bg-white rounded-xl shadow-md w-full p-13">
+        <div className="flex items-center justify-center bg-background px-10 lg:px-100 2xl:px-230">
+            <div className="flex flex-col items-center bg-white rounded-xl shadow-md p-10 lg:p-13">
                 <img
                 src="/Logo-Login.png"
                 alt="Logo Vive Medellín"
