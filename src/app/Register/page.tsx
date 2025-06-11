@@ -1,4 +1,4 @@
-'use client'
+//'use client'
 import React from 'react'
 //import { useState } from "react"
 import Footer from '../../components/atoms/Footer/index'
