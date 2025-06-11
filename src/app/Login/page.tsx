@@ -30,8 +30,8 @@ export default function Login () {
                 />
             </div>
         </div>
-        <div className="flex items-center justify-center bg-background px-10 lg:px-100 2xl:px-230">
-            <div className="flex flex-col items-center bg-white rounded-xl shadow-md p-10 lg:p-13">
+        <div className="flex justify-center bg-background lg:px-70 lg:w-full 2xl:px-230">
+            <div className="flex flex-col items-center justify-between bg-white rounded-xl shadow-md p-10 lg:p-13 gap-2 lg:w-150 py-20 lg:py-7">
                 <img
                 src="/Logo-Login.png"
                 alt="Logo Vive Medellín"
@@ -49,7 +49,7 @@ export default function Login () {
                     classes='text-sky-600'
                     />
                 </div>
-                <form className='flex flex-col items-center my-3 gap-2'>
+                <form className='flex flex-col items-center gap-4'>
                     <TextBox
                     name='email'
                     type='email'
@@ -68,7 +68,7 @@ export default function Login () {
                     />
                 </form>
                 <div className='flex flex-col items-center gap-2'>
-                    <Text classes='text-sky-600'>Olvidé mi contraseña</Text>
+                    <Text classes='text-sky-600 hover:cursor-pointer my-2'>Olvidé mi contraseña</Text>
                     <Button />
                 </div>
             </div>
