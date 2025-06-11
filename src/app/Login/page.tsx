@@ -26,7 +26,7 @@ export default function Login () {
                 titleClasses='text-black hover:text-gray-500 leading-none inline-block'
                 title='Regresar'
                 link= '/'
-                classes='flex flex-row hover:cursor-pointer hover:border-b'
+                classes='flex flex-row gap-x-1 hover:cursor-pointer hover:border-b'
                 />
             </div>
         </div>
