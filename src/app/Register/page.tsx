@@ -56,9 +56,7 @@ export default function Register () {
                 </form>
                 <div className='flex flex-col items-center gap-2'>
                     <Text classes='text-sky-600 hover:cursor-pointer my-2'>Terminos y condiciones</Text>
-                    <Button
-                    children='Crear cuenta'
-                    />
+                    <Button>Crear cuenta</Button>
                 </div>
             </div>
         </div>
