@@ -31,7 +31,7 @@ export default function Login () {
             </div>
         </div>
         <div className="flex justify-center bg-background lg:px-70 lg:w-full 2xl:px-230">
-            <div className="flex flex-col items-center justify-between bg-white rounded-xl shadow-md p-10 lg:p-13 gap-2 lg:w-150 py-20 lg:py-7">
+            <div className="flex flex-col items-center justify-between bg-white rounded-xl shadow-md p-10 lg:p-13 gap-2 lg:w-150 py-20 lg:py-7 px-8">
                 <img
                 src="/Logo-Login.png"
                 alt="Logo Vive Medellín"
