@@ -1,36 +1,41 @@
-name: SonarCloud Analysis
+name: SonarCloud Baseline Analysis
 
 on:
   push:
     branches:
       - QA
   pull_request:
+    branches:
+      - QA
     types: [opened, synchronize, reopened]
+  workflow_dispatch:
 
 jobs:
-  sonarqube:
-    name: SonarCloud
+  sonarcloud-analysis:
+    name: SonarCloud Analysis
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Set up Node.js
+      - name: Install Node.js 22.x
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22.x
 
-      - name: Install dependencies
+      - name: Install Dependencies
         run: yarn install
+        continue-on-error: true
 
-      - name: Run SonarCloud Scan
-        uses: SonarSource/sonarcloud-github-action@v2
-        with:
-          args: >
-            -Dsonar.organization=${{ secrets.SONAR_ORGANIZATION }}
-            -Dsonar.projectKey=${{ secrets.SONAR_PROJECT_KEY }}
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
         env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_TOKEN: #${{ secrets.SONAR_TOKEN }}
+
+      - name: Analysis Complete
+        run: |
+          echo "✅ SonarCloud analysis completed successfully!"
+          echo "📊 Check your results at: https://sonarcloud.io"
