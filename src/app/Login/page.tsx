@@ -69,7 +69,7 @@ export default function Login () {
                 </form>
                 <div className='flex flex-col items-center gap-2'>
                     <Text classes='text-sky-600 hover:cursor-pointer my-2'>Olvidé mi contraseña</Text>
-                    <Button>Iniciar sesión</Button>
+                    <Button iconName='material-symbols:login-sharp' classIcon='mt-1'>Iniciar sesión</Button>
                 </div>
             </div>
         </div>
