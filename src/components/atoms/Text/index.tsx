@@ -1,12 +1,12 @@
 import React from 'react'
 
 type TextProps = {
-    classes?: string
-    children: React.ReactNode
+    readonly classes?: string
+    readonly children: React.ReactNode
 }
 
 export default function Text (props: TextProps) {
-    const classNames = `${props.classes || ''}`
+    const classNames = `${props.classes ?? ''}`
     return (
         <p className={classNames}>
             {props.children}

@@ -1,9 +1,9 @@
 import React from 'react';
 
 interface IndexProps {
-    title: string,
-    info: string,
-    classes?: string
+    readonly title: string,
+    readonly info: string,
+    readonly classes?: string
 }
 
 export default function Section ({ title, info, classes }: IndexProps) {

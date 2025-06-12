@@ -2,9 +2,9 @@ import { Icon as IconifyIcon } from '@iconify/react';
 import React from 'react';
 
 type IconProps = {
-  icon: string;
-  classes?: string;
-  onClick?: React.MouseEventHandler<SVGSVGElement>;
+  readonly icon: string;
+  readonly classes?: string;
+  readonly onClick?: React.MouseEventHandler<SVGSVGElement>;
 };
 
 export default function Icon({ icon, classes = '', onClick }: IconProps) {

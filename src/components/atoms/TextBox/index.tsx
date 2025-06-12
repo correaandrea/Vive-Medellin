@@ -1,12 +1,12 @@
 import React from 'react'
 
 type TextBoxProps = {
-  name: string;
-  type?: string;
-  placeholder?: string;
-  value: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  className?: string;
+  readonly name: string;
+  readonly type?: string;
+  readonly placeholder?: string;
+  readonly value: string;
+  readonly onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  readonly className?: string;
 }
 
 export default function TextBox(props: TextBoxProps) {

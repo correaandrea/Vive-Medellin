@@ -3,11 +3,11 @@ import Link from 'next/link';
 import Icon from '../Icon/index'
 
 interface IndexProps {
-    title: string,
-    titleClasses?: string,
-    classes?: string
-    link: string,
-    iconName?: string
+    readonly title: string,
+    readonly titleClasses?: string,
+    readonly classes?: string,
+    readonly link: string,
+    readonly iconName?: string
 }
 
 export default function Titles ({ title, link, iconName, titleClasses, classes }: IndexProps) {

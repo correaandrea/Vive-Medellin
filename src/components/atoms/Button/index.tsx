@@ -1,7 +1,7 @@
 import React from 'react'
 
 type ButtonProps = {
-  children: string
+  readonly children: string
 }
 
 export default function Button(props: ButtonProps) {

@@ -1,20 +1,13 @@
 //'use client'
 import React from 'react'
-//import { useState } from "react"
 import Footer from '../../components/atoms/Footer/index'
 import Icon from '../../components/atoms/Icon/index'
 import NavTitle from '../../components/atoms/NavTitle/index'
 import Text from '../../components/atoms/Text/index'
-// import TextBox from '../../components/atoms/TextBox/index'
 import Button from '../../components/atoms/Button/index'
 
 export default function Register () {
-//   const [form, setForm] = useState({ email: "", password: "" })
 
-//   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-//     const { name, value } = e.target;
-//     setForm({ ...form, [name]: value });
-//   };
 
   return (
     <div className='flex flex-col min-h-screen justify-between bg-background'>
