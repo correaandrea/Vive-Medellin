@@ -1,5 +1,3 @@
-# .github/workflows/sonar-analysis.yml
-
 name: SonarCloud Analysis
 
 on:
