@@ -3,7 +3,6 @@ import React from 'react'
 import { useState } from 'react';
 import NavTitle from '../../atoms/NavTitle/index'
 import Icon from '../../atoms/Icon/index'
-import Button from '../../atoms/Button/index'
 import { useAuth } from '@/hooks/auth';
 
 export default function Header() {
