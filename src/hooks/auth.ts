@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { Login } from '../services/auth';
 import { UserLogin, ResponseLogin } from '../interfaces/user';
+import { AxiosError } from 'axios';
 
 export function useAuth() {
   const [name, setName] = useState<string | null>(null)
@@ -24,8 +25,9 @@ export function useAuth() {
       else if (response.rol === 'user') router.push('/User');
 
       return response;
-    } catch (err: any) {
-      throw new Error(err.response?.data?.message || 'Error al iniciar sesión');
+    } catch (err) {
+        const error = err as AxiosError<{ message: string }>;
+        throw new Error(error.response?.data?.message || 'Error al iniciar sesión');
     } finally {
       setLoading(false);
     }
