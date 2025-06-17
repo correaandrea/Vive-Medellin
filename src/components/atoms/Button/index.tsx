@@ -1,7 +1,26 @@
 import React from 'react'
+import Icon from '../Icon/index'
 
-export default function Button() {
+type ButtonProps = {
+  children: string,
+  iconName?: string
+  classes?: string
+  classIcon?: string
+  disabled?: boolean
+}
+
+export default function Button(props: ButtonProps) {
+  const hasIcon = Boolean(props.iconName);
   return (
-    <button className='w-90 h-10 bg-primary font-inter rounded-xs text-white text-lg hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer'>Iniciar sesión</button>
+    <button 
+      className={`${props.classes} ${
+        hasIcon ? 'gap-2' : 'px-5' }`}
+      disabled={props.disabled}
+    >
+      <span >{props.children}</span>
+      {hasIcon && (
+        <Icon icon={props.iconName || ''} classes={props.classIcon || ''}/>
+      )}
+    </button>
   );
 }
