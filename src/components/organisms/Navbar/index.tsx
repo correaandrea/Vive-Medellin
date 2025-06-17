@@ -1,5 +1,5 @@
 'use client'
-import React, { useState, useEffect }from 'react'
+import React, { useState }from 'react'
 import { useAuth } from '../../../hooks/auth'
 import NavTitle from '../../atoms/NavTitle/index'
 import CartEvent from '../../molecules/CartEvent/index'
@@ -15,15 +15,6 @@ export default function Navbar() {
     { title: 'En curso', img: '/encurso.png' },
     { title: 'Próximos', img: '/proximos.png' },
     { title: 'Programados', img: '/programados.png' },
-  ]
-  
-  const cardsType = [
-    { title: 'Música', img: '/musica.png' },
-    { title: 'Arte y cine', img: '/cine.png' },
-    { title: 'Deporte', img: '/deporte.png' },
-    { title: 'Cultura', img: '/cultura.png' },
-    { title: 'Académico', img: '/academico.png' },
-    { title: 'Ferias', img: '/feria.png' },
   ]
 
   return (
