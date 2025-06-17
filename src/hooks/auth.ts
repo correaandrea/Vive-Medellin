@@ -6,10 +6,13 @@ import { UserLogin, ResponseLogin } from '../interfaces/user';
 import { AxiosError } from 'axios';
 
 export function useAuth() {
+  const router = useRouter();
+
+  const [token, setToken] = useState<string | null>(null);
+  const [rol, setRol] = useState<string | null>(null);
   const [name, setName] = useState<string | null>(null)
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
-  const router = useRouter();
 
   const login = async (form: UserLogin): Promise<ResponseLogin | null> => {
     setLoading(true);
@@ -19,10 +22,12 @@ export function useAuth() {
       localStorage.setItem('token', response.access_token);
       localStorage.setItem('rol', response.rol);
       localStorage.setItem('name', response.name);
+      setToken(response.access_token);
+      setRol(response.rol);
       setName(response.name);
 
-      if (response.rol === 'admin') router.push('/Admin');
-      else if (response.rol === 'user') router.push('/User');
+      if (response.rol === 'admin') router.push('/');
+      else if (response.rol === 'user') router.push('/');
 
       return response;
     } catch (err) {
@@ -35,18 +40,20 @@ export function useAuth() {
 
   const logout = () => {
     localStorage.removeItem('token');
+    window.location.reload();
     localStorage.removeItem('rol');
     localStorage.removeItem('name');
+    setToken(null);
+    setRol(null);
     setName(null);
-    router.push('/');
+    window.location.href = '/';
   };
 
   useEffect(() => {
-    const storedName = localStorage.getItem('name');
-    if (storedName) {
-      setName(storedName);
-    }
+    setToken(localStorage.getItem('token'));
+    setRol(localStorage.getItem('rol'));
+    setName(localStorage.getItem('name'));
   }, []);
 
-  return { login, logout, loading, error, name }
+  return { token, rol, login, logout, loading, error, name }
 }

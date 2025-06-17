@@ -40,7 +40,7 @@ export default function Header() {
                   <>
                     <button
                       onClick={logout}
-                      className="text-red-500 hover:text-red-700 border border-red-500 rounded px-2 py-1 mt-2"
+                      className="text-red-500 hover:text-red-700 hover:cursor-pointer border border-red-500 rounded px-2 py-1 mt-2"
                     >
                       Cerrar sesión
                     </button>
@@ -79,7 +79,7 @@ export default function Header() {
 
                 <button
                   onClick={logout}
-                  className="text-red-500 hover:text-red-700 border border-red-500 rounded px-2 py-1 mt-2"
+                  className="text-red-500 hover:text-red-700 hover:cursor-pointer border border-red-500 rounded px-2 py-1 mt-2"
                 >
                   Cerrar sesión
                 </button>
