@@ -1,7 +1,6 @@
 import React from 'react'
 import Header from '../components/organisms/Header/index'
 import Navbar from '../components/organisms/Navbar/index'
-import Body from '../components/organisms/Body';
 import Footer from '../components/atoms/Footer/index';
 
 export default function Home() {
