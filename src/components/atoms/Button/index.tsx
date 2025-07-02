@@ -7,12 +7,14 @@ type ButtonProps = {
   classes?: string
   classIcon?: string
   disabled?: boolean
+  type?: 'button' | 'submit' | 'reset'
 }
 
 export default function Button(props: ButtonProps) {
   const hasIcon = Boolean(props.iconName);
   return (
     <button 
+      type={props.type || 'button'}
       className={`${props.classes} ${
         hasIcon ? 'gap-2' : 'px-5' }`}
       disabled={props.disabled}

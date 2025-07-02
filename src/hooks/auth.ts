@@ -1,8 +1,8 @@
 'use client'
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import { Login } from '../services/auth';
-import { UserLogin, ResponseLogin } from '../interfaces/user';
+import { Login, Register } from '../services/auth';
+import { UserLogin, ResponseLogin, UserRegister } from '../interfaces/user';
 import { AxiosError } from 'axios';
 
 export function useAuth() {
@@ -49,11 +49,37 @@ export function useAuth() {
     window.location.href = '/';
   };
 
+  const register = async (form: UserRegister): Promise<void> => {
+    setLoading(true);
+    setError(null);
+    try {
+      await Register(form);
+
+      // Auto-login usando la función del hook
+      await login({
+        email: form.email,
+        password: form.password
+      });
+    } catch (err) {
+      const error = err as AxiosError<{ message: string }>;
+      throw new Error(error.response?.data?.message || 'Error al registrarse');
+    } finally {
+      setLoading(false);
+    }
+};
+
   useEffect(() => {
     setToken(localStorage.getItem('token'));
     setRol(localStorage.getItem('rol'));
     setName(localStorage.getItem('name'));
   }, []);
 
-  return { token, rol, login, logout, loading, error, name }
+  return { token,
+  rol,
+  name,
+  login,
+  logout,
+  register,
+  loading,
+  error }
 }

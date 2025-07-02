@@ -74,6 +74,7 @@ export default function Login () {
                     />
                     {error && <Text classes='text-red-500'>{error}</Text>}
                     <Button 
+                    type='submit'
                     iconName='material-symbols:login-sharp' 
                     classIcon='mt-1' 
                     classes='flex items-center justify-center w-[300px] pb-1 bg-primary font-inter font-semibold rounded text-white text-lg hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer shadow'
